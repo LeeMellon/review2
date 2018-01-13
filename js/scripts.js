@@ -9,27 +9,32 @@ $(function() {
 
   var result = (function(c, ruby, php, java, css) {
     if (c > ruby && c > php && c > java && c > css) {
-      var winner = "C#";
+      var winner = "C# might be the language for you.";
       console.log("2" + winner);
     } else if (ruby > c && ruby > php && ruby > java && ruby > css) {
-      var winner = "Ruby";
+      var winner = "Ruby might be the language for you.";
       console.log("3" + winner);
 
     } else if (php > c && php > ruby && php > java && php > css) {
-      var winner = "php";
+      var winner = "php might be the language for you.";
       console.log("4" + winner);
 
     } else if (java > c && java > ruby && java > css && java > css) {
-      var winner = "JavaScript";
+      var winner = "JavaScript might be the language for you.";
       console.log("5" + winner);
 
     } else if (css > c && css > ruby && css > php && css > java) {
-      var winner = "CSS";
+      var winner = "CSS might be the language for you.";
+    } else {
+      var winner = "You might be a Replicant, so no worries!"
     }
-    console.log("6" + winner);
-    return winner;
-  });
 
+    console.log("6" + winner);
+    // return winner;
+    $("#questions").fadeOut(900, "swing");
+    $("#resultDiv").delay(950).fadeIn(900, "swing");
+    $("#answer").text(winner);
+  });
 
 
 
@@ -45,9 +50,9 @@ $(function() {
     if (calf === "a") {
       c += .5, ruby += 1.0, php += 0.0, java += .75, css += .25;
     } else if (calf === "b") {
-      c += 1, ruby += 0, php += 1, java += .5, css += .5;
+      c += 1, ruby += 0, php += .25, java += .75, css += .5;
     } else if (calf === "c") {
-      c += 0, ruby += 1, php += .5, java += .25, css += 1;
+      c += 0, ruby += 1, php += .5, java += .25, css += .75;
     }
     console.log(c, ruby, php, java, css);
   });
@@ -62,9 +67,9 @@ $(function() {
     if (jar === "a") {
       c += .5, ruby += 1.0, php += 0.0, java += .75, css += .25;
     } else if (jar === "b") {
-      c += 1, ruby += 0, php += 1, java += .5, css += .5;
+      c += .25, ruby += 0, php += 1, java += .75, css += .5;
     } else if (jar === "c") {
-      c += 0, ruby += 1, php += .5, java += .25, css += 1;
+      c += 0, ruby += 1, php += .5, java += .25, css += .75;
     }
     console.log(c, ruby, php, java, css);
 
@@ -80,9 +85,9 @@ $(function() {
     if (wasp === "a") {
       c += .5, ruby += 1.0, php += 0.0, java += .75, css += .25;
     } else if (wasp === "b") {
-      c += 1, ruby += 0, php += 1, java += .5, css += .5;
+      c += 1, ruby += 0, php += .25, java += .5, css += .75;
     } else if (wasp === "c") {
-      c += 0, ruby += 1, php += .5, java += .25, css += 1;
+      c += 0, ruby += 1, php += .5, java += .25, css += .75;
     }
     console.log(c, ruby, php, java, css);
 
@@ -98,9 +103,9 @@ $(function() {
     if (dog === "a") {
       c += .5, ruby += 1.0, php += 0.0, java += .75, css += .25;
     } else if (dog === "b") {
-      c += 1, ruby += 0, php += 1, java += .5, css += .5;
+      c += 1, ruby += 0, php += .25, java += .5, css += .75;
     } else if (dog === "c") {
-      c += 0, ruby += 1, php += .5, java += .25, css += 1;
+      c += 0, ruby += 1, php += .5, java += .25, css += .75;
     }
     console.log(c, ruby, php, java, css);
 
@@ -110,15 +115,14 @@ $(function() {
     var tort = $("input:radio[name=tortoise]:checked").val();
     event.preventDefault();
     $("#tortDiv").fadeOut(900, "swing", "complete");
-    $("#resultDiv").delay(950).fadeIn(900, "swing");
     console.log(tort);
 
     if (tort === "a") {
       c += .5, ruby += 1.0, php += 0.0, java += .75, css += .25;
     } else if (tort === "b") {
-      c += 1, ruby += 0, php += 1, java += .5, css += .5;
+      c += 1, ruby += 0, php += .5, java += .25, css += .75;
     } else if (tort === "c") {
-      c += 0, ruby += 1, php += .5, java += .25, css += 1;
+      c += 0, ruby += 1, php += .75, java += .25, css += .5;
     }
     console.log(c, ruby, php, java, css);
     result(c, ruby, php, java, css);

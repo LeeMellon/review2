@@ -1,24 +1,50 @@
-.bgimage{
+.bgimage {
   background-image: url("../img/voit5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   width: 100%;
   height: 100%;
-
 }
 
-#questions{
+#questions {
   color: white;
-  font-size: 12pt;
+  font-size: 14pt;
+  border: solid;
+  border-width: 5px;
+  border-color: rgba(250, 250, 250, .7);
+  border-radius: 15px;
 }
 
-.jumbotron{
-color: rgba(0, 0, 0, 0.9);
-background-color: rgba(255, 255, 255, 0.3);
-text-align: center;
+
+.questionText {
+  font-size: 18pt;
 }
 
-#jarDiv, #waspDiv, #dogDiv, #tortDiv{
+.jumbotron {
+  color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+.resultBox{
+  width: 100%;
+
+}
+#resultDiv {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: rgb(255,255,255);
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+  border: solid;
+  border-width: 5px;
+  border-color: rgba(250, 250, 250, .7);
+  border-radius: 15px;
+}
+
+#jarDiv, #waspDiv, #dogDiv, #tortDiv, #resultDiv {
   display: none;
 }
