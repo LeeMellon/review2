@@ -1,13 +1,16 @@
 $(function() {
+
   var c = 0;
   var ruby = 0;
   var php = 0;
   var java = 0;
   var css = 0;
-  var winner = "nothing";
-  console.log("1" + winner);
+  var winner = "";
+  var nameMe = "";
 
-  var result = (function(c, ruby, php, java, css) {
+
+
+  var result = (function(c, ruby, php, java, css, nameMe) {
     if (c > ruby && c > php && c > java && c > css) {
       var winner = "C# might be the language for you.";
       console.log("2" + winner);
@@ -28,15 +31,25 @@ $(function() {
     } else {
       var winner = "You might be a Replicant, so no worries!"
     }
-
-    console.log("6" + winner);
+    console.log(nameMe + winner);
     // return winner;
     $("#questions").fadeOut(900, "swing");
     $("#resultDiv").delay(950).fadeIn(900, "swing");
-    $("#answer").text(winner);
+    $("#answer").text(nameMe + " " + winner);
+
   });
 
 
+
+$("#nameBtn").click(function(event) {
+  nameMe = $("#name").val();
+  event.preventDefault();
+  $("#introContainer").fadeOut(900, "swing");
+  $("#questions").delay(920).fadeIn(900, "swing");
+  $("#calfDiv").delay(920).fadeIn(900, "swing");
+  console.log(nameMe);
+
+});
 
 
 
@@ -54,7 +67,7 @@ $(function() {
     } else if (calf === "c") {
       c += 0, ruby += 1, php += .5, java += .25, css += .75;
     }
-    console.log(c, ruby, php, java, css);
+    console.log(c, ruby, php, java, css, nameMe);
   });
 
   $("#jar").change(function(event) {
@@ -124,8 +137,8 @@ $(function() {
     } else if (tort === "c") {
       c += 0, ruby += 1, php += .75, java += .25, css += .5;
     }
-    console.log(c, ruby, php, java, css);
-    result(c, ruby, php, java, css);
+    console.log(c, ruby, php, java, css, name);
+    result(c, ruby, php, java, css, nameMe);
   });
 
 

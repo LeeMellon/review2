@@ -17,7 +17,13 @@
         <br>
         <h4>Answer These Questions to Find Your Match:</h4>
       </div>
-
+      <div id="introContainer">
+        <h3>Hello. Welcome to the programming language selector. We're about to ask you a few simple questions inorder to determine which progemmming language is most suited to your personality. Please answer all question honestly and remember, any discomfort in all in your head. Please begin by entering your name and pressing the button.</h3>
+        <form id="nameForm">
+          <input type="text" id="name" name="name" placeholder="Please Enter Your Name">
+          <button type="button" class="btn btn-default" id="nameBtn">Submit</button>
+        </form>
+      </div>
       <div class="container" id="questions">
         <div id="calfDiv">
           <p>It's your birthday. Someone gives you a calfskin wallet. How do you react?</p>
@@ -27,40 +33,40 @@
             <input type="radio" name="calf" value="c">Thank you for the wallet.
           </form>
         </div>
-      <div id="jarDiv">
-        <p class="questionText">You've got a little boy. He shows you his butterfly collection plus the killing jar. What do you do?</p>
-        <form id="jar">
-          <input type="radio" name="jar" value="a">That's nice, but why don't you keep the killing jar for yourself?<br>
-          <input type="radio" name="jar" value="b">Oh lovely.<br>
-          <input type="radio" name="jar" value="c">I take him to the doctor.
-        </form>
+        <div id="jarDiv">
+          <p class="questionText">You've got a little boy. He shows you his butterfly collection plus the killing jar. What do you do?</p>
+          <form id="jar">
+            <input type="radio" name="jar" value="a">That's nice, but why don't you keep the killing jar for yourself?<br>
+            <input type="radio" name="jar" value="b">Oh lovely.<br>
+            <input type="radio" name="jar" value="c">I take him to the doctor.
+          </form>
+        </div>
+        <div id="waspDiv">
+          <p class="questionText">You're watching television. Suddenly you realize there's a wasp crawling on your arm.</p>
+          <form id="wasp">
+            <input type="radio" name="wasp" value="a">I swap it away.<br>
+            <input type="radio" name="wasp" value="b">I scream, and grab the closest thing near me and beat the hell out of it. <br>
+            <input type="radio" name="wasp" value="c">I kill it.
+          </form>
+        </div>
+        <div id="dogDiv">
+          <p class="questionText">You're watching a stage play - a banquet is in progress. The guests are enjoying an appetizer of raw oysters. The entree consists of boiled dog stuffed with rice. The raw oysters are less acceptable to you than a dish of boiled dog. </p>
+          <form id="dog">
+            <input type="radio" name="dog" value="a">Not true.<br>
+            <input type="radio" name="dog" value="b">Disgusting!<br>
+            <input type="radio" name="dog" value="c">I wouldn't eat boiled dog!
+          </form>
+        </div>
+        <div id="tortDiv">
+          <p class="questionText">You're in a desert walking along in the sand when all of the sudden you look down, and you see a tortoise, it's crawling toward you. You reach down, you flip the tortoise over on it's back. The tortoise lays on it's back, it's belly baking in
+            the hot sun, beating it's legs trying to turn it'self over, but it can't, not without your help. But you're not helping. Why is that?</p>
+          <form id="tortoise">
+            <input type="radio" name="tortoise" value="a">I swap it away.<br>
+            <input type="radio" name="tortoise" value="b">I scream, and grab the closest thing near me and beat the hell out of it. <br>
+            <input type="radio" name="tortoise" value="c">I kill it.
+          </form>
+        </div>
       </div>
-      <div id="waspDiv">
-        <p class="questionText">You're watching television. Suddenly you realize there's a wasp crawling on your arm.</p>
-        <form id="wasp">
-          <input type="radio" name="wasp" value="a">I swap it away.<br>
-          <input type="radio" name="wasp" value="b">I scream, and grab the closest thing near me and beat the hell out of it. <br>
-          <input type="radio" name="wasp" value="c">I kill it.
-        </form>
-      </div>
-      <div id="dogDiv">
-        <p class="questionText">You're watching a stage play - a banquet is in progress. The guests are enjoying an appetizer of raw oysters. The entree consists of boiled dog stuffed with rice. The raw oysters are less acceptable to you than a dish of boiled dog. </p>
-        <form id="dog">
-          <input type="radio" name="dog" value="a">Not true.<br>
-          <input type="radio" name="dog" value="b">Disgusting!<br>
-          <input type="radio" name="dog" value="c">I wouldn't eat boiled dog!
-        </form>
-      </div>
-      <div id="tortDiv">
-        <p class="questionText">You're in a desert walking along in the sand when all of the sudden you look down, and you see a tortoise, it's crawling toward you. You reach down, you flip the tortoise over on it's back. The tortoise lays on it's back, it's belly baking in
-          the hot sun, beating it's legs trying to turn it'self over, but it can't, not without your help. But you're not helping. Why is that?</p>
-        <form id="tortoise">
-          <input type="radio" name="tortoise" value="a">I swap it away.<br>
-          <input type="radio" name="tortoise" value="b">I scream, and grab the closest thing near me and beat the hell out of it. <br>
-          <input type="radio" name="tortoise" value="c">I kill it.
-        </form>
-      </div>
-    </div>
       <div class="resultBox">
         <div id="resultDiv">
           <h2 id="answer"></h2>
